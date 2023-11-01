@@ -10,7 +10,9 @@ import * as directives from 'vuetify/directives'
 const vuetify = createVuetify({
     components,
     directives,
-    icons
+    icons: {
+        defaultSet: 'mdi'
+    }
 })
 
 createApp(App).use(vuetify).mount('#app')
