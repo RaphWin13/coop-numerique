@@ -1,41 +1,39 @@
-import { Question, Answer, Resolution } from "../../util/question/module";
+import Part from "@/util/questionnaire/Part";
+import Answer from "@/util/questionnaire/Answer";
 
 // reuseable text
 const allGoodText = "All good!";
 const doesNotWorkText = "Does not work";
 
 // resolutions
-const replaceResolution = new Resolution("Replace.");
-const repairResolution = new Resolution("Repair.");
-const dontDoAnythingOrReplaceScreenResolution = new Resolution("Don't do anything for now or replace the screen.");
-const replaceOrRepairResolution = new Resolution("Replace or repair.");
-const notSureResolution = new Resolution("Not sure here.");
-const replaceBatteryResolution = new Resolution("Replace battery.");
-const waitABitResolution = new Resolution("Wait a bit.");
-const saveBatteryResolution = new Resolution("Battery saving mode, reduce brightness, disable apps that use a lot of battery.");
+const replaceResolution = new Part("Replace.");
+const repairResolution = new Part("Repair.");
+const dontDoAnythingOrReplaceScreenResolution = new Part("Don't do anything for now or replace the screen.");
+const replaceOrRepairResolution = new Part("Replace or repair.");
+const notSureResolution = new Part("Not sure here.");
+const replaceBatteryResolution = new Part("Replace battery.");
+const waitABitResolution = new Part("Wait a bit.");
+const saveBatteryResolution = new Part("Battery saving mode, reduce brightness, disable apps that use a lot of battery.");
 
 // questions and answers
 const allGoodAnswer = new Answer(allGoodText);
 
 // Overheating and usage
-const checkForUpdatesDoesNotWorkQuestion = new Question("", [
+const checkForUpdatesDoesNotWorkQuestion = new Part("", [
   new Answer("Older than 2 years", replaceResolution),
   new Answer("Younger than 2 years", repairResolution),
 ]);
 const checkForUpdatesDoesNotWorkAnswer = new Answer(doesNotWorkText, checkForUpdatesDoesNotWorkQuestion);
 
-const checkForUpdatesQuestion = new Question(
+const checkForUpdatesQuestion = new Part(
   "Check for updates, delete and download again, check storage space, clear things running in the background, update phone OS, turn phone off then on again. Shut down apps (lower RAM usage), delete unnecessary files.",
   [allGoodAnswer, checkForUpdatesDoesNotWorkAnswer],
 );
 
-const buttonResetCombinationQuestion = new Question("Try some button reset combination", [
-  allGoodAnswer,
-  new Answer(doesNotWorkText, replaceResolution),
-]);
-const chargeAndRetryQuestion = new Question("Charge it and retry.", [allGoodAnswer, new Answer(doesNotWorkText, buttonResetCombinationQuestion)]);
+const buttonResetCombinationQuestion = new Part("Try some button reset combination", [allGoodAnswer, new Answer(doesNotWorkText, replaceResolution)]);
+const chargeAndRetryQuestion = new Part("Charge it and retry.", [allGoodAnswer, new Answer(doesNotWorkText, buttonResetCombinationQuestion)]);
 
-const usageQuestion = new Question("", [
+const usageQuestion = new Part("", [
   new Answer("Slow", checkForUpdatesQuestion),
   new Answer("App crashes", checkForUpdatesQuestion),
   new Answer("Cannot turn on", chargeAndRetryQuestion),
@@ -43,13 +41,13 @@ const usageQuestion = new Question("", [
 
 // Physical problem
 const blackSpotsAnswer = new Answer("Black spots, blurring, discoloration > comfort", dontDoAnythingOrReplaceScreenResolution);
-const blackSpotsQuestion = new Question("", [blackSpotsAnswer]);
+const blackSpotsQuestion = new Part("", [blackSpotsAnswer]);
 
-const toothbrushQuestion = new Question("", [allGoodAnswer, new Answer(doesNotWorkText, replaceOrRepairResolution)]);
+const toothbrushQuestion = new Part("", [allGoodAnswer, new Answer(doesNotWorkText, replaceOrRepairResolution)]);
 const chargingPortAnswer = new Answer("Clean it with new toothbrush or dry cotton swab", toothbrushQuestion);
-const chargingPortQuestion = new Question("", [chargingPortAnswer]);
+const chargingPortQuestion = new Part("", [chargingPortAnswer]);
 
-const physicalProblemQuestion = new Question("", [
+const physicalProblemQuestion = new Part("", [
   new Answer("Buttons", repairResolution),
   new Answer("Screen", blackSpotsQuestion),
   new Answer("Charging port", chargingPortQuestion),
@@ -57,24 +55,24 @@ const physicalProblemQuestion = new Question("", [
 ]);
 
 // Battery drainage
-const eightyPercentBatteryQuestion = new Question("Loses more than 80% of its battery in one day", [
+const eightyPercentBatteryQuestion = new Part("Loses more than 80% of its battery in one day", [
   new Answer("Yes", replaceBatteryResolution),
   new Answer("No", waitABitResolution),
 ]);
 
-const batteryDrainageQuestion = new Question("", [
+const batteryDrainageQuestion = new Part("", [
   new Answer("Older than 2 years", eightyPercentBatteryQuestion),
   new Answer("More recent than 2 years", saveBatteryResolution),
 ]);
 
 // Connectivity
-const tryRestartingQuestion = new Question("Try restarting.", [
+const tryRestartingQuestion = new Part("Try restarting.", [
   allGoodAnswer,
   new Answer("Try enabling airplane mode for at least 1 minute, restart wifi and connect (can restart router also)."),
 ]);
 
 // Water
-const turnPhoneOffQuestion = new Question(
+const turnPhoneOffQuestion = new Part(
   "Turn phone off, shake, dry it in front of fan, if still weird then replace phone. Do not turn on, remove battery if possible.",
   [allGoodAnswer, new Answer(doesNotWorkText, replaceResolution)],
 );
@@ -87,7 +85,7 @@ const batteryDrainageAnswer = new Answer("Battery drainage", batteryDrainageQues
 const connectivityAnswer = new Answer("Connectivity", tryRestartingQuestion);
 const waterAnswer = new Answer("Water", turnPhoneOffQuestion);
 
-export default smartphoneRootQuestion = new Question("Type of problem", [
+export default smartphoneRootQuestion = new Part("Type of problem", [
   overheatingAnswer,
   usageAnswer,
   physicalProblemAnswer,
