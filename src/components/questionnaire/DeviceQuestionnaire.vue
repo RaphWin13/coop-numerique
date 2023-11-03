@@ -14,11 +14,10 @@ let parts = reactive([firstPart.value]);
 
 const reactToAnswer = (e, partPosition, selectedAnswer) => {
   const partToAdd = parts[partPosition].answers[selectedAnswer].followUp;
-  console.log(partToAdd);
+  
   if (partToAdd != undefined) {
-    parts.splice(partPosition + 1, Infinity, partToAdd)
+    parts.splice(partPosition + 1, Infinity, partToAdd);
   }
-  console.log(parts.length);
 };
 </script>
 

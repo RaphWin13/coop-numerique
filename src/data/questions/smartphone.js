@@ -4,6 +4,7 @@ import Answer from "@/util/questionnaire/Answer";
 // reuseable text
 const allGoodText = "All good!";
 const doesNotWorkText = "Does not work";
+const deviceAgeText = "What is the age of the device?";
 
 // resolutions
 const replaceResolution = new Part("Replace.");
@@ -19,7 +20,7 @@ const saveBatteryResolution = new Part("Battery saving mode, reduce brightness, 
 const allGoodAnswer = new Answer(allGoodText, new Part("Excellent!"));
 
 // Overheating and usage
-const checkForUpdatesDoesNotWorkQuestion = new Part("", [
+const checkForUpdatesDoesNotWorkQuestion = new Part(deviceAgeText, [
   new Answer("Older than 2 years", replaceResolution),
   new Answer("Younger than 2 years", repairResolution),
 ]);
@@ -58,7 +59,7 @@ const eightyPercentBatteryQuestion = new Part("Loses more than 80% of its batter
   new Answer("No", waitABitResolution),
 ]);
 
-const batteryDrainageQuestion = new Part("", [
+const batteryDrainageQuestion = new Part(deviceAgeText, [
   new Answer("Older than 2 years", eightyPercentBatteryQuestion),
   new Answer("More recent than 2 years", saveBatteryResolution),
 ]);
