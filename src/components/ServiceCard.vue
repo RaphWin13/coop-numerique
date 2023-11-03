@@ -2,6 +2,9 @@
     <v-hover
         v-slot="{ isHovering, props }"
     >
+    <router-link
+        :to="{ name: path }" custom v-slot="{ navigate }"
+    >
         <v-card 
             variant="outlined"
             :class="{ 'on-hover': isHovering }"
@@ -9,6 +12,7 @@
             style="cursor: pointer;"
             width="50%"
             v-bind="props"
+            @click="navigate"
         >
             <v-card-title>
                 <v-icon :icon=iconTitle class="mr-2"></v-icon>
@@ -16,6 +20,7 @@
             </v-card-title>
             <v-card-text>{{ question }}</v-card-text>
         </v-card>
+    </router-link>
     </v-hover>
 </template>
 
@@ -26,7 +31,8 @@
         props: {
             typeService: String,
             iconTitle: String,
-            question: String
+            question: String,
+            path: String
         }
     }
 </script>
@@ -35,6 +41,6 @@
 
 .on-hover {
     transition: 0.2s ease-in-out;
-    transform: scale(1.1);
+    transform: scale(1.04);
 }
 </style>
