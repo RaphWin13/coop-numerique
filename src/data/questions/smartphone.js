@@ -16,7 +16,7 @@ const waitABitResolution = new Part("Wait a bit.");
 const saveBatteryResolution = new Part("Battery saving mode, reduce brightness, disable apps that use a lot of battery.");
 
 // questions and answers
-const allGoodAnswer = new Answer(allGoodText);
+const allGoodAnswer = new Answer(allGoodText, new Part("Excellent!"));
 
 // Overheating and usage
 const checkForUpdatesDoesNotWorkQuestion = new Part("", [
@@ -43,9 +43,7 @@ const usageQuestion = new Part("", [
 const blackSpotsAnswer = new Answer("Black spots, blurring, discoloration > comfort", dontDoAnythingOrReplaceScreenResolution);
 const blackSpotsQuestion = new Part("", [blackSpotsAnswer]);
 
-const toothbrushQuestion = new Part("", [allGoodAnswer, new Answer(doesNotWorkText, replaceOrRepairResolution)]);
-const chargingPortAnswer = new Answer("Clean it with new toothbrush or dry cotton swab", toothbrushQuestion);
-const chargingPortQuestion = new Part("", [chargingPortAnswer]);
+const chargingPortQuestion = new Part("Clean it with new toothbrush or dry cotton swab", [allGoodAnswer, new Answer(doesNotWorkText, replaceOrRepairResolution)]);
 
 const physicalProblemQuestion = new Part("", [
   new Answer("Buttons", repairResolution),
@@ -68,7 +66,7 @@ const batteryDrainageQuestion = new Part("", [
 // Connectivity
 const tryRestartingQuestion = new Part("Try restarting.", [
   allGoodAnswer,
-  new Answer("Try enabling airplane mode for at least 1 minute, restart wifi and connect (can restart router also)."),
+  new Answer(doesNotWorkText, new Part("Try enabling airplane mode for at least 1 minute, restart wifi and connect (can restart router also).")),
 ]);
 
 // Water
@@ -85,7 +83,7 @@ const batteryDrainageAnswer = new Answer("Battery drainage", batteryDrainageQues
 const connectivityAnswer = new Answer("Connectivity", tryRestartingQuestion);
 const waterAnswer = new Answer("Water", turnPhoneOffQuestion);
 
-export default smartphoneRootQuestion = new Part("Type of problem", [
+export const smartphoneRootQuestion = new Part("Type of problem", [
   overheatingAnswer,
   usageAnswer,
   physicalProblemAnswer,
