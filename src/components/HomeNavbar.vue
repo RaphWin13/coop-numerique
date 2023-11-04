@@ -2,7 +2,7 @@
     <v-toolbar
         color="white"
     >
-        <img height="50" class="ma-5" :src="require('../assets/light-bulb.png')"/>
+        <img height="50" class="ma-5" :src="require('../assets/light-bulb.png')" style="cursor: pointer;" @click="$router.push({ name: 'home' })"/>
         <v-spacer></v-spacer>
         <v-toolbar-items>
             <router-link
