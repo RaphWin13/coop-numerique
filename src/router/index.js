@@ -2,6 +2,7 @@ import { createWebHistory, createRouter } from "vue-router";
 import HomePage from "../components/HomePage.vue";
 import DiagnosticPage from "../components/diagnostic/DiagnosticPage.vue";
 import ReparationPage from "@/components/ReparationPage.vue";
+import EntretienPreventif from "@/components/EntretienPreventif.vue";
 
 const routes = [
     {
@@ -20,6 +21,11 @@ const routes = [
     {
         path: "/",
         name: "contacts",
+    },
+    {
+        path: "/entretien",
+        name: "entretienPreventif",
+        component: EntretienPreventif
     },
     {
         path: "/diagnostic",
