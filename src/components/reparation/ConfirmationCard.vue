@@ -2,20 +2,9 @@
 </script>
 
 <template>
-  <v-hover v-slot="{ isHovering, props }">
-        <v-card 
-            variant="elevated"
-            :class="{ 'on-hover': isHovering }"
-            class="mb-5 mx-1"
-            width="100%"
-            v-bind="props"
-            elevation=20
-        >
-            <v-card-title>
-              <p class="text-h5 font-weight-black"> Confirmation {{exactDate()}} à {{exactTime()}}</p>
-            </v-card-title>
-        </v-card>
-    </v-hover>
+            <v-btn class="text-h5 font-weight-black" color="grey" height="100">
+              Confirmer votre rendez-vous le {{exactDate()}} à {{exactTime()}}
+            </v-btn>
 </template>
 
 <script>

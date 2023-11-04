@@ -8,7 +8,17 @@
             v-bind="props"
         >
             <v-card-title>
-              <p class="text-h4 font-weight-black">Prenez un rendez-vous avec nos réparateurs</p>
+              <p class="text-h4 font-weight-black">Notre service de réparation</p>
+            </v-card-title>
+
+            <v-card-text class="text-h6 font-weight-medium">
+              Nous offrons un service de réparation pour tous les électroniques.
+              Amenez-nous vos téléphones, ordinateurs, tablettes, consoles de jeux, etc. 
+              Notre équipe de réparateurs fera tout en son posible pour leur donner une seconde vie.
+            </v-card-text>
+        
+            <v-card-title>
+              <p class="text-h4 font-weight-black">Prenez un rendez-vous pour réparer votre appareil</p>
             </v-card-title>
 
             <v-container fluid>
@@ -17,7 +27,6 @@
                   <v-date-picker 
                     v-model="selectedDate"
                     :allowed-dates="allowedDates"
-                    landscape=true
                     elevation=20
                     min-width="100%">
                   </v-date-picker>
