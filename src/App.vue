@@ -1,14 +1,28 @@
 <template>
-  <router-view />
+  <v-app id="app">
+    <HomeNavbar />
+    <router-view></router-view>
+  </v-app>
 </template>
+
+<script>
+import HomeNavbar from "./components/HomeNavbar.vue";
+
+
+export default {
+  name: "App",
+  components: {
+    HomeNavbar
+}
+}
+</script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Montserrat;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>

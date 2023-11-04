@@ -1,23 +1,42 @@
-import { createRouter, createWebHistory } from "vue-router";
-import HomePage from "@/components/HomePage.vue";
+import { createWebHistory, createRouter } from "vue-router";
+import HomePage from "../components/HomePage.vue";
+import DiagnosticPage from "../components/diagnostic/DiagnosticPage.vue";
 import ReparationPage from "@/components/ReparationPage.vue";
 
 const routes = [
     {
         path: "/",
-        name: "Home",
-        component: HomePage,
+        name: "home",
+        component: HomePage
     },
     {
-        path: "/rdv",
-        name: "Reparation",
+        path: "/",
+        name: "recycler"
+    },
+    {
+        path: "/",
+        name: "aPropos",
+    },
+    {
+        path: "/",
+        name: "contacts",
+    },
+    {
+        path: "/diagnostic",
+        name: "diagnostic",
+        component: DiagnosticPage
+    },
+    {
+        path: "/reparation",
+        name: "reparation",
         component: ReparationPage,
     },
-];
+] 
+
 
 const router = createRouter({
     history: createWebHistory(),
     routes,
 });
 
-export default router
+export default router;

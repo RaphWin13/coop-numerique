@@ -1,6 +1,5 @@
 <template>
   <v-app>
-    <v-app-bar title="Co-op numérique"></v-app-bar>
     <v-main class="d-flex flex-column align-center">
       <AppointementCard></AppointementCard>
       <ReparatorsCard></ReparatorsCard>
