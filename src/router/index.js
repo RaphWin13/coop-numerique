@@ -2,7 +2,7 @@ import { createWebHistory, createRouter } from "vue-router";
 import HomePage from "../components/HomePage.vue";
 import DiagnosticPage from "../components/diagnostic/DiagnosticPage.vue";
 import ReparationPage from "@/components/ReparationPage.vue";
-import EntretienPreventif from "@/components/EntretienPreventif.vue";
+import EntretienPreventif from "@/components/entretien/EntretienPreventif.vue";
 import DeviceQuestionnaire from "@/components/questionnaire/DeviceQuestionnaire.vue"
 
 import { smartphoneRootQuestion } from "@/data/questions/smartphone";
