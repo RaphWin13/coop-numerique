@@ -8,7 +8,7 @@
         <v-card 
             variant="outlined"
             :class="{ 'on-hover': isHovering }"
-            class="mb-5 mx-1"
+            class="mb-5 mx-2"
             style="cursor: pointer;"
             width="50%"
             v-bind="props"

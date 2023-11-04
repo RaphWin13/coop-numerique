@@ -9,9 +9,10 @@
                  v-for="item in navbarItems"
                 :key="item"
                 :to="{ name: item.route }"
-                custom
+                custom v-slot="{ navigate }"
             >
                 <v-btn
+                    @click="navigate"
                     style="cursor: pointer;"
                 >
                 <v-icon left :icon="item.icon" size="large" style="padding-right: 10%;"></v-icon>
