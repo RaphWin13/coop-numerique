@@ -6,21 +6,15 @@
         >
             <v-card>
                 <v-card-title>{{ device.type }}</v-card-title>
-                <DeviceQuestionnaire v-bind:firstPart="rootQuestion"></DeviceQuestionnaire>
             </v-card>
         </v-window-item>
     </v-window>
 </template>
 
 <script>
-import DeviceQuestionnaire from "../questionnaire/DeviceQuestionnaire.vue";
-import smartphoneRootQuestion from "src/data/questions/smartphone";
 
     export default {
         name: "DeviceType",
-        components: {
-            DeviceQuestionnaire
-        },
         data() {
             return {
                 devices: [
@@ -30,7 +24,6 @@ import smartphoneRootQuestion from "src/data/questions/smartphone";
                     {"type": "Périphériques externes"}
                     
                 ],
-                rootQuestion: smartphoneRootQuestion
             }
         }
     }
