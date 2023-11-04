@@ -29,7 +29,7 @@ import ServiceCard from './ServiceCard.vue';
             return {
                 services: [
                     {"type": "Diagnostic", route: "diagnostic", "text": "Vous souhaitez diagnostiquer un appareil?", "icon": "mdi-magnify"},
-                    {"type": "Prendre un RDV",  route: "diagnostic", "text": "vous souhaitez prendre rendez-vous avec l'un de nos spécialistes?", "icon": "mdi-calendar"},
+                    {"type": "Prendre un RDV",  route: "reparation", "text": "vous souhaitez prendre rendez-vous avec l'un de nos spécialistes?", "icon": "mdi-calendar"},
                     {"type": "Boutique",  route: "diagnostic", "text": "Achat de matériel électronique remis à neuf", "icon": "mdi-shopping"},
                     {"type": "Entretien préventif",  route: "diagnostic", "text": "Trucs et astuces pour l'entretien préventif de vos appareils électronique", "icon": "mdi-tools"},
                     {"type": "Plus d'informations",  route: "diagnostic", "text": "En apprendre plus sur les problèmes récurrents des appareils électroniques modernes et comment les réparer soi-même", "icon": "mdi-laptop"},
