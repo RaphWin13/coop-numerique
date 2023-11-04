@@ -1,6 +1,6 @@
 <script setup>
 import { smartphoneRootQuestion } from "../data/questions/smartphone";
-import DeviceQuestionnaire from "./questionnaire/DeviceQuestionnaire.vue";
+import DeviceQuestionnaire from "../components/questionnaire/DeviceQuestionnaire.vue";
 
 const rootQuestion = smartphoneRootQuestion;
 </script>
