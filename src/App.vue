@@ -10,7 +10,7 @@ import HomeNavbar from "./components/HomeNavbar.vue";
 
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     HomeNavbar
 }
