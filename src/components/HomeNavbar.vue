@@ -2,16 +2,17 @@
     <v-toolbar
         color="white"
     >
-        <img height="50" class="ma-5" :src="require('../assets/light-bulb.png')"/>
+        <img height="50" class="ma-5" :src="require('../assets/light-bulb.png')" style="cursor: pointer;" @click="$router.push({ name: 'home' })"/>
         <v-spacer></v-spacer>
         <v-toolbar-items>
             <router-link
                  v-for="item in navbarItems"
                 :key="item"
                 :to="{ name: item.route }"
-                custom
+                custom v-slot="{ navigate }"
             >
                 <v-btn
+                    @click="navigate"
                     style="cursor: pointer;"
                 >
                 <v-icon left :icon="item.icon" size="large" style="padding-right: 10%;"></v-icon>

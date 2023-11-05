@@ -7,8 +7,8 @@
         width="60%"
         v-bind="props"
     >
-        <v-card-title class="text-h4 font-weight-black">
-          Notre équipe de réparateurs
+        <v-card-title class="text-h4 font-weight-black pa-2">
+        Notre équipe de réparateurs
         </v-card-title>
 
         <v-card-text class="text-h6 font-weight-medium pa-2">
@@ -27,7 +27,7 @@
                       <img v-bind:src="require(`@/assets/team/${reparator.name}.png`)" 
                       width="200"/>
                     </a>
-                    <v-list-item-title class="text-h5 font-weight-black ma-2 pa-2">{{ reparator.name }}</v-list-item-title>
+                    <v-list-item-title class="text-h5 font-weight-black ma-2">{{ reparator.name }}</v-list-item-title>
                     <v-list-item-subtitle class="text-h6 pa-2">Spécialité: {{ reparator.speciality }}</v-list-item-subtitle>
                     <v-list-item-subtitle class="text-h6 pa-2" >{{ reparator.experience }} d'expérience</v-list-item-subtitle>
                   </v-list-item>

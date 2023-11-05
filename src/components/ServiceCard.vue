@@ -5,10 +5,10 @@
     <router-link
         :to="{ name: path }" custom v-slot="{ navigate }"
     >
-        <v-card 
-            variant="outlined"
+        <v-card
             :class="{ 'on-hover': isHovering }"
-            class="mb-5 mx-1"
+            class="mb-5 mx-2"
+            variant="outlined"
             style="cursor: pointer;"
             width="50%"
             v-bind="props"

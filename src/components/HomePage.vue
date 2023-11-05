@@ -1,10 +1,12 @@
 <template>
     <v-card class="mx-15 mt-10 pb-5" elevation="0">
-        <v-card-title class="text-center">
-            <p class="text-h3 font-weight-black">Coop-numérique</p>
+        <v-card-title class="text-center text-h3 font-weight-black pb-5">
+            Coop-numérique
         </v-card-title>
-        <v-card-subtitle class="mb-10 text-center">Coop de l'Université Laval</v-card-subtitle>
-        <v-row class="d-flex justify-center">
+        <v-card-subtitle class="mb-10 text-center">
+            Coop de l'Université Laval
+        </v-card-subtitle>
+        <div class="d-flex justify-space-between mb-10 px-3">
             <ServiceCard 
                 v-for="service in services"
                 :key=service
@@ -13,7 +15,83 @@
                 :question=service.text
                 :path=service.route
             />
-        </v-row>
+        </div>
+        <v-card-text class="d-flex justify-space-between">
+            <v-card class="ml-1 mr-3" variant="outlined" width="50%" elevation="0">
+                <v-card-title class="font-weight-bold">
+                    Mission de la Coop
+                </v-card-title>
+            </v-card>
+            <v-card class="ml-3 mr-1 px-5 pb-5" variant="outlined" width="50%" elevation="0">
+                <v-card-title>Promouvoir la récupération</v-card-title>
+
+                <div class="d-flex flex-column">
+                    <div class="text-center mt-3">
+                        <v-hover
+                            v-slot="{ isHovering, props }"
+                        >
+                        <div class="d-flex mb-3">
+                            <v-card variant="outlined" class="mx-2" width="20%" style="cursor: pointer;" v-bind="props">
+                                <v-card-title class="font-weight-bold">R</v-card-title>
+                            </v-card>
+                            <v-card v-if="isHovering" elevation="0">
+                                <v-card-title>Recycler</v-card-title>
+                            </v-card>
+                        </div>
+                        </v-hover>
+                        <v-hover
+                            v-slot="{ isHovering, props }"
+                        >
+                        <div class="d-flex  mb-3">
+                            <v-card variant="outlined" class="mx-2" width="20%" style="cursor: pointer;" v-bind="props">
+                                <v-card-title class="font-weight-bold">E</v-card-title>
+                            </v-card>
+                            <v-card v-if="isHovering" elevation="0">
+                                <v-card-title>Éduquer</v-card-title>
+                            </v-card>
+                        </div>
+                        </v-hover>
+                        <v-hover
+                            v-slot="{ isHovering, props }"
+                        >
+                        <div class="d-flex mb-3">
+                            <v-card variant="outlined" class="mx-2" width="20%" style="cursor: pointer;" v-bind="props">
+                                <v-card-title class="font-weight-bold">C</v-card-title>
+                            </v-card>
+                            <v-card v-if="isHovering" elevation="0">
+                                <v-card-title>Communauté</v-card-title>
+                            </v-card>
+                        </div>
+                        </v-hover>
+                        <v-hover
+                            v-slot="{ isHovering, props }"
+                        >
+                        <div class="d-flex mb-3">
+                            <v-card variant="outlined" class="mx-2" width="20%" style="cursor: pointer;" v-bind="props">
+                                <v-card-title class="font-weight-bold">U</v-card-title>
+                            </v-card>
+                            <v-card v-if="isHovering" elevation="0">
+                                <v-card-title>Utilité</v-card-title>
+                            </v-card>
+                        </div>
+                        </v-hover>
+                        <v-hover
+                            v-slot="{ isHovering, props }"
+                        >
+                        <div class="d-flex mb-3">
+                            <v-card variant="outlined" class="mx-2" width="20%" style="cursor: pointer;" v-bind="props">
+                                <v-card-title class="font-weight-bold">P</v-card-title>
+                            </v-card>
+                            <v-card v-if="isHovering" elevation="0">
+                                <v-card-title>Promouvoir</v-card-title>
+                            </v-card>
+                        </div>
+                        </v-hover>
+                    </div>
+                </div>
+            </v-card>
+
+        </v-card-text>
     </v-card>
 </template>
 
