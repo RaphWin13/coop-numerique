@@ -2,6 +2,16 @@
   <v-app id="app">
     <HomeNavbar />
     <router-view></router-view>
+    <div class="d-flex justify-end"> 
+      <v-btn
+        prepend-icon="mdi-chat"
+        size="large"
+        width="10%"
+        class="d-flex ma-7"
+      >
+        Chat
+      </v-btn>
+    </div>
   </v-app>
 </template>
 
@@ -22,7 +32,6 @@ export default {
   font-family: Montserrat;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
 }
 </style>

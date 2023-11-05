@@ -1,7 +1,6 @@
 <template>
     <v-card class="mx-15 mt-15 pb-5" height="100%" elevation="0">
-        <v-card-title class="text-center">Revaloriser plutôt que jeter, tout en redonnant à la communauté!</v-card-title>
-        <div class="d-flex justify-space-between mt-15 mb-10 px-3">
+        <div class="d-flex justify-space-between mt-10 mb-10 px-3">
             <ServiceCard 
                 v-for="service in services"
                 :key=service
@@ -12,11 +11,13 @@
             />
         </div>
         <v-card-text class="d-flex">
-            <v-card class="mr-1 px-5 pb-5" width="50%" elevation="0">
-                <v-card-title class="pl-2 font-weight-bold">Promouvoir la récupération</v-card-title>
-
+            <v-card class="mr-1 px-5 pb-5" width="auto" elevation="0">
+                <v-card-title class="pl-2 text-h5 font-weight-bold">
+                    Notre mission
+                </v-card-title>
+                <p class="pl-2 text-h6">Revaloriser plutôt que jeter, tout en redonnant à la communauté!</p>
                 <div class="d-flex flex-column">
-                    <div class="text-center mt-3">
+                    <div class="text-center mt-7">
                         <v-hover
                             v-slot="{ isHovering, props }"
                         >
@@ -25,7 +26,7 @@
                                 <v-card-title class="font-weight-bold">R</v-card-title>
                             </v-card>
                             <v-card v-if="isHovering" elevation="0">
-                                <v-card-title>Recycler</v-card-title>
+                                <v-card-title>Revalorisation</v-card-title>
                             </v-card>
                         </div>
                         </v-hover>
@@ -37,7 +38,7 @@
                                 <v-card-title class="font-weight-bold">E</v-card-title>
                             </v-card>
                             <v-card v-if="isHovering" elevation="0">
-                                <v-card-title>Éduquer</v-card-title>
+                                <v-card-title>Éducation</v-card-title>
                             </v-card>
                         </div>
                         </v-hover>
@@ -61,7 +62,7 @@
                                 <v-card-title class="font-weight-bold">U</v-card-title>
                             </v-card>
                             <v-card v-if="isHovering" elevation="0">
-                                <v-card-title>Utilité</v-card-title>
+                                <v-card-title>Usage préventif</v-card-title>
                             </v-card>
                         </div>
                         </v-hover>
@@ -73,7 +74,7 @@
                                 <v-card-title class="font-weight-bold">P</v-card-title>
                             </v-card>
                             <v-card v-if="isHovering" elevation="0">
-                                <v-card-title>Promouvoir</v-card-title>
+                                <v-card-title>Protection des données</v-card-title>
                             </v-card>
                         </div>
                         </v-hover>

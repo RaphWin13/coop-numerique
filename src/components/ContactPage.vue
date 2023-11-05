@@ -1,5 +1,4 @@
 <template>
-<v-title  class="text-h1 d-flex justify-space-around mt-10">COOP RécupAtek</v-title>
   <div class="d-flex flex-column align-center mt-8">
     <v-card class="mb-5" variant="flat" width="60%" elevation="0">
       <v-card-title class = "text-h4 mt-2">
@@ -11,7 +10,7 @@
       </v-card-text>
     </v-card>
 
-    <v-card class="mb-5" variant="outlined" width="60%" elevation="10">
+    <v-card class="mb-5" variant="outlined" width="60%" elevation="0">
       <v-card-title class = "text-h4 mt-2">
         Heures d'ouverture
       </v-card-title>
