@@ -9,6 +9,7 @@ import DeviceQuestionnaire from "@/components/questionnaire/DeviceQuestionnaire.
 import { smartphoneRootQuestion } from "@/data/questions/smartphone";
 import { computerRootQuestion } from "@/data/questions/ordinateur";
 import { consoleRootQuestion } from "@/data/questions/consoleJeuVideo";
+import {consoleVideoSources, computerSources, smartphoneSources} from '@/data/sources/sourcesQuestionnaires'
 
 const routes = [
     {
@@ -54,7 +55,8 @@ const routes = [
         component: DeviceQuestionnaire,
         props: {
             deviceType: "Téléphones intelligents et tablettes",
-            firstPart: smartphoneRootQuestion
+            firstPart: smartphoneRootQuestion,
+            sources: smartphoneSources
         }
     },
     {
@@ -63,7 +65,8 @@ const routes = [
         component: DeviceQuestionnaire,
         props: {
             deviceType: "Ordinateurs",
-            firstPart: computerRootQuestion
+            firstPart: computerRootQuestion,
+            sources: computerSources
         }
     },
     {
@@ -72,7 +75,8 @@ const routes = [
         component: DeviceQuestionnaire,
         props: {
             deviceType: "Consoles de jeu",
-            firstPart: consoleRootQuestion
+            firstPart: consoleRootQuestion,
+            sources: consoleVideoSources
         }
     }
 ] 

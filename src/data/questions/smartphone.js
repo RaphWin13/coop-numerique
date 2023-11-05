@@ -7,11 +7,11 @@ const doesNotWorkText = "Ne fonctionne pas";
 const deviceAgeText = "Quel est l'âge de l'appareil?";
 
 // resolutions
-const replaceResolution = new Part("Il faudrait remplacer l'appareil.");
-const repairResolution = new Part("Il faudrait réparer l'appareil.");
-const dontDoAnythingOrReplaceScreenResolution = new Part("Ne rien faire ou faire réparer l'écran.");
-const replaceOrRepairResolution = new Part("Il faudrait réparer ou remplacer selon l'âge.");
-const replaceBatteryResolution = new Part("Il faudrait remplacer la batterie.");
+const replaceResolution = new Part("Il faudrait remplacer l'appareil.", [], true);
+const repairResolution = new Part("Il faudrait réparer l'appareil.", [], false, true);
+const dontDoAnythingOrReplaceScreenResolution = new Part("Ne rien faire ou faire réparer l'écran.", [], false, true);
+const replaceOrRepairResolution = new Part("Il faudrait réparer ou remplacer selon l'âge.", [], true, true);
+const replaceBatteryResolution = new Part("Il faudrait remplacer la batterie.", [], false, true);
 const waitABitResolution = new Part("Attendre un peu.");
 //const saveBatteryResolution = new Part("Essayer le mode d'économie de batterie, réduire la clarté de l'écran, désactiver les applications qui demandent beaucoup d'énergie.");
 

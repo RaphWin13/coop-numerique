@@ -8,12 +8,12 @@ const overheat = "Nettoyer les ventilateurs, placer la console dans un endroit a
 // const deviceAgeText = "What is the age of the device?";
 
 // resolutions
-const replaceResolution = new Part("Il faudrait remplacer la console.");
-const repairResolution = new Part("Il faudrait réparer la console.");
-const replaceDisk = new Part("Il faudrait réparer le disque interne.")
-const updgradeAndRepair = new Part("Il faudrait remplacer le système ou le mettre à jour (réparation nécessaire).");
-const motherBoardResolution = new Part("Réparer la mother board et faire nettoyer l'appareil par un spécialiste.");
-const cleanItResolution = new Part("Il faudrait le faire nettoyer par un spécialiste");
+const replaceResolution = new Part("Il faudrait remplacer la console.", [], true);
+const repairResolution = new Part("Il faudrait réparer la console.", [], false, true);
+const replaceDisk = new Part("Il faudrait réparer le disque interne.", [], false, true);
+const updgradeAndRepair = new Part("Il faudrait remplacer le système ou le mettre à jour (réparation nécessaire).", [], true, true);
+const motherBoardResolution = new Part("Réparer la mother board et faire nettoyer l'appareil par un spécialiste.", [], false, true);
+const cleanItResolution = new Part("Il faudrait le faire nettoyer par un spécialiste", [], false, true);
 
 // questions and answers
 const allGoodAnswer = new Answer(allGoodText, new Part("Excellent!"));
