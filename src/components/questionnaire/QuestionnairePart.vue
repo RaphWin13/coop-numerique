@@ -9,10 +9,27 @@
       </div>
     </v-radio-group>
   </div>
+
+  <RecuperationCard v-if="part.isRecuperation"></RecuperationCard>
+  <ReparationCard v-if="part.isReparation"></ReparationCard>
+
 </template>
 
 <script setup>
 defineProps(["part", "partPosition", "reactToAnswer"]);
 </script>
 
+<script>
+import RecuperationCard from "../sources/RecuperationCard.vue";
+import ReparationCard from "../sources/ReparationCard.vue";
+
+export default {
+        name: "QuestionnairePart",
+        components: {
+          RecuperationCard,
+          ReparationCard,
+        },
+    };
+    
+</script>
 <style></style>
