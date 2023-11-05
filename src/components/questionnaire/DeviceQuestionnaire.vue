@@ -3,7 +3,7 @@
     <v-card-title>{{ deviceType }}</v-card-title>
     <v-divider />
     <div class="d-flex flex-column align-center mt-3" v-for="(part, index) in parts" :key="part.id">
-      <QuestionnairePart v-bind:part="part" v-bind:partPosition="index" v-bind:reactToAnswer="reactToAnswer"></QuestionnairePart>
+      <QuestionnairePart v-bind:part="part" v-bind:partPosition="index" v-bind:reactToAnswer="reactToAnswer" ></QuestionnairePart>
     </div>
   </v-card>
 </template>
