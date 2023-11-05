@@ -3,6 +3,11 @@
         color="white"
     >
         <img height="50" class="ma-5" :src="require('../assets/light-bulb.png')" style="cursor: pointer;" @click="$router.push({ name: 'home' })"/>
+        <div class="d-flex flex-column">
+            <p class="text-h6 font-weight-bold">Coop Récupatek</p>
+            <p class="text-sm-caption">Coop numérique de l'Université Laval</p>
+        </div>
+
         <v-spacer></v-spacer>
         <v-toolbar-items>
             <router-link

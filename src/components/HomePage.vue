@@ -1,12 +1,7 @@
 <template>
-    <v-card class="mx-15 mt-10 pb-5" elevation="0">
-        <v-card-title class="text-center text-h3 font-weight-black pb-5">
-            Coop-numérique
-        </v-card-title>
-        <v-card-subtitle class="mb-10 text-center">
-            Coop de l'Université Laval
-        </v-card-subtitle>
-        <div class="d-flex justify-space-between mb-10 px-3">
+    <v-card class="mx-15 mt-15 pb-5" height="100%" elevation="0">
+        <v-card-title class="text-center">Revaloriser plutôt que jeter, tout en redonnant à la communauté!</v-card-title>
+        <div class="d-flex justify-space-between mt-15 mb-10 px-3">
             <ServiceCard 
                 v-for="service in services"
                 :key=service
@@ -16,14 +11,9 @@
                 :path=service.route
             />
         </div>
-        <v-card-text class="d-flex justify-space-between">
-            <v-card class="ml-1 mr-8" variant="outlined" width="50%" elevation="0">
-                <v-card-title class="font-weight-bold">
-                    Mission de la Coop
-                </v-card-title>
-            </v-card>
-            <v-card class="ml-8 mr-1 px-5 pb-5" variant="outlined" width="50%" elevation="0">
-                <v-card-title class="font-weight-bold">Promouvoir la récupération</v-card-title>
+        <v-card-text class="d-flex">
+            <v-card class="mr-1 px-5 pb-5" width="50%" elevation="0">
+                <v-card-title class="pl-2 font-weight-bold">Promouvoir la récupération</v-card-title>
 
                 <div class="d-flex flex-column">
                     <div class="text-center mt-3">
@@ -111,7 +101,8 @@ import ServiceCard from './ServiceCard.vue';
                     {"type": "Boutique",  route: "boutique", "text": "Achat de matériel électronique remis à neuf", "icon": "mdi-shopping"},
                     {"type": "Entretien préventif",  route: "entretienPreventif", "text": "Trucs et astuces pour l'entretien préventif de vos appareils électronique", "icon": "mdi-tools"},
                     {"type": "Plus d'informations",  route: "diagnostic", "text": "En apprendre plus sur les problèmes récurrents des appareils électroniques modernes et comment les réparer soi-même", "icon": "mdi-laptop"},
-                ]
+                ],
+                missionCoopText: "La mission de la coop est de promouvoir une utilisation responsable des appareils électroniques."
             }
         }
     }
