@@ -17,13 +17,13 @@
             />
         </div>
         <v-card-text class="d-flex justify-space-between">
-            <v-card class="ml-1 mr-3" variant="outlined" width="50%" elevation="0">
+            <v-card class="ml-1 mr-8" variant="outlined" width="50%" elevation="0">
                 <v-card-title class="font-weight-bold">
                     Mission de la Coop
                 </v-card-title>
             </v-card>
-            <v-card class="ml-3 mr-1 px-5 pb-5" variant="outlined" width="50%" elevation="0">
-                <v-card-title>Promouvoir la récupération</v-card-title>
+            <v-card class="ml-8 mr-1 px-5 pb-5" variant="outlined" width="50%" elevation="0">
+                <v-card-title class="font-weight-bold">Promouvoir la récupération</v-card-title>
 
                 <div class="d-flex flex-column">
                     <div class="text-center mt-3">
