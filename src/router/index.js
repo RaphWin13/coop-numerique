@@ -3,6 +3,7 @@ import HomePage from "../components/HomePage.vue";
 import DiagnosticPage from "../components/diagnostic/DiagnosticPage.vue";
 import ReparationPage from "@/components/ReparationPage.vue";
 import EntretienPreventif from "@/components/EntretienPreventif.vue";
+import BoutiquePage from "@/components/BoutiquePage.vue";
 
 const routes = [
     {
@@ -21,6 +22,11 @@ const routes = [
     {
         path: "/",
         name: "contacts",
+    },
+    {
+        path: "/boutique",
+        name: "boutique",
+        component: BoutiquePage
     },
     {
         path: "/entretien",
