@@ -5,6 +5,8 @@ import ReparationPage from "@/components/ReparationPage.vue";
 import EntretienPreventif from "@/components/entretien/EntretienPreventif.vue";
 import BoutiquePage from "@/components/BoutiquePage.vue";
 import DeviceQuestionnaire from "@/components/questionnaire/DeviceQuestionnaire.vue"
+import AboutPage from "@/components/AboutPage.vue";
+import ContactPage from "@/components/ContactPage.vue";
 
 import { smartphoneRootQuestion } from "@/data/questions/smartphone";
 import { computerRootQuestion } from "@/data/questions/ordinateur";
@@ -22,12 +24,14 @@ const routes = [
         name: "recycler"
     },
     {
-        path: "/",
+        path: "/aPropos",
         name: "aPropos",
+        component: AboutPage
     },
     {
-        path: "/",
+        path: "/contact",
         name: "contacts",
+        component: ContactPage
     },
     {
         path: "/boutique",
