@@ -27,7 +27,7 @@
       Voir plus de produits
     </v-btn>
     
-    <v-title class="text-h3 font-weight-black pa-4"> Pièces réusinés </v-title>
+    <v-title class="text-h3 font-weight-black pa-4"> Pièces réusinées </v-title>
     <v-container>
       <v-row>
         <v-col
