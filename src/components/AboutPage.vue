@@ -6,7 +6,7 @@
       <v-card-text class="text-md-h6 text-justify">
         RécupAtek c’est une coopérative visant la valorisation des appareils électroniques en offrant des services de récupération, de réparation, de redistribution et d’accompagnement. 
         Les membres bénéficient de l’accès aux services de réparations et aux ateliers pour la réparation autonome (formations préalables). 
-        Les services de formations, de dépôt d’appareils électroniques dessuais/inutilisés au centre de récupération et d’achat d’appareils revalorisés sont quant-à-eux offert à tous! 
+        Les services de formations, de dépôt d’appareils électroniques désuets/inutilisés au centre de récupération et d’achat d’appareils revalorisés sont quant-à-eux offert à tous! 
       <v-card class="mb-5" variant="flat" elevation="0">
         <v-card-title class="text-h4 mt-10 pa-0 font-weight-bold">
           Notre mission

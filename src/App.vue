@@ -4,10 +4,12 @@
     <router-view></router-view>
     <div class="d-flex justify-end"> 
       <v-btn
+        variant="outlined"
         prepend-icon="mdi-chat"
         size="large"
         width="10%"
         class="d-flex ma-7"
+        elevation="0"
       >
         Chat
       </v-btn>
